@@ -13,40 +13,58 @@ import {
   Image,
   Grid,
   SlideFade,
+  keyframes,
 } from "@chakra-ui/react";
 import Profile from "./assets/profile.jpg";
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState, useEffect } from "react";
+import theme from "./theme";
+import "@fontsource/press-start-2p";
+import "@fontsource/fira-code";
+const blink = keyframes`
+  from {opacity: 0}
+  to {opacity: 1}
+`;
 function App() {
   return (
-    <ChakraProvider>
-      <Center h="100vh">
+    <ChakraProvider theme={theme}>
+      <Center minH="100vh">
         <Container
           maxW={["container.sm", null, null, "container.xl"]}
           py={4}
           overflow="auto"
         >
-          <SimpleGrid columns={[1, null, null, 2]} spacing={8}>
+          <Grid templateColumns={["1fr", null, null, "3fr 2fr"]} gap={8}>
             <Stack
-              spacing={4}
+              spacing={8}
               justify="center"
               align={["flex-start", null, null, "flex-end"]}
             >
-              <Heading size="3xl">Hi I'm Tony!</Heading>
+              <Heading
+                fontFamily={`"Fira Code"`}
+                size="xl"
+                _after={{
+                  pl: 1,
+                  content: `"█"`,
+                  animation: `${blink} .9s infinite ease;`,
+                }}
+              >
+                Hi I'm Tony
+              </Heading>
               <Stack
-                wrap="wrap"
+                textStyle="code"
                 alignContent={["flex-start", null, null, "flex-end"]}
                 align={["flex-start", null, null, "flex-end"]}
               >
-                <Text size="lg">
+                <Text size="md" ml="auto">
                   I'm a software engineering student at the University of
                   Waterloo.
                 </Text>
-                <Text size="lg">
+                <Text size="md">
                   I'm currently working at
                   <chakra.span fontWeight={700}> Applyboard </chakra.span>
                   on the Platform team.
                 </Text>
-                <Text size="lg">
+                <Text size="md">
                   Previously, I've worked at
                   <chakra.span fontWeight={700}> LCBOnext</chakra.span> and
                   <chakra.span fontWeight={700}> Condos.ca.</chakra.span>
@@ -62,13 +80,13 @@ function App() {
             <Image
               borderRadius="xl"
               transition="all 0.25s"
-              _hover={{ transform: "scale(1.01, 1.01)" }}
+              _hover={{ transform: "scale(1.02, 1.02)" }}
               boxSize={[80, null, null, "sm"]}
               src={Profile}
               alt={"Picture of Tony Zhao"}
               objectFit="cover"
             ></Image>
-          </SimpleGrid>
+          </Grid>
         </Container>
       </Center>
     </ChakraProvider>

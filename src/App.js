@@ -12,9 +12,13 @@ import {
   Text,
   Image,
   Grid,
+  LinkBox,
+  LinkOverlay,
   SlideFade,
   keyframes,
 } from "@chakra-ui/react";
+import { LinkIcon } from "@chakra-ui/icons";
+import { VscGithubInverted } from "react-icons/vsc";
 import Profile from "./assets/profile.jpg";
 import React, { useState, useEffect } from "react";
 import theme from "./theme";
@@ -60,7 +64,7 @@ function App() {
                   Waterloo.
                 </Text>
                 <Text size="md">
-                  I'm currently working at
+                  I'm currently working as an intern at
                   <chakra.span fontWeight={700}> Applyboard </chakra.span>
                   on the Platform team.
                 </Text>
@@ -72,8 +76,18 @@ function App() {
               </Stack>
               <Box>
                 <ButtonGroup>
-                  <Button variant="outline">Resume</Button>
-                  <Button>Github</Button>
+                  <LinkBox>
+                    <LinkOverlay href="/resume.pdf">
+                      <Button rightIcon={<LinkIcon />} variant="outline">
+                        Resume
+                      </Button>
+                    </LinkOverlay>
+                  </LinkBox>
+                  <LinkBox>
+                    <LinkOverlay href="https://github.com/tawnyzhao">
+                      <Button rightIcon={<VscGithubInverted />}>GitHub</Button>
+                    </LinkOverlay>
+                  </LinkBox>
                 </ButtonGroup>
               </Box>
             </Stack>

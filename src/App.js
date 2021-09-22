@@ -90,6 +90,9 @@ function App() {
                   </LinkBox>
                 </ButtonGroup>
               </Box>
+              <Text textStyle="pixel" fontSize={10}>
+                blog coming soon...
+              </Text>
             </Stack>
             <Image
               borderRadius="xl"

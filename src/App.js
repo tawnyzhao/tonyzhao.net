@@ -19,6 +19,7 @@ import {
 } from "@chakra-ui/react";
 import { LinkIcon } from "@chakra-ui/icons";
 import { VscGithubInverted } from "react-icons/vsc";
+import { GrLinkedin } from "react-icons/gr";
 import Profile from "./assets/profile.jpg";
 import React, { useState, useEffect } from "react";
 import theme from "./theme";
@@ -86,6 +87,13 @@ function App() {
                   <LinkBox>
                     <LinkOverlay href="https://github.com/tawnyzhao">
                       <Button rightIcon={<VscGithubInverted />}>GitHub</Button>
+                    </LinkOverlay>
+                  </LinkBox>
+                  <LinkBox>
+                    <LinkOverlay href="https://linkedin.com/in/tonyzhao2001">
+                      <Button colorScheme="blue" rightIcon={<GrLinkedin />}>
+                        LinkedIn
+                      </Button>
                     </LinkOverlay>
                   </LinkBox>
                 </ButtonGroup>

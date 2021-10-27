@@ -15,7 +15,7 @@ const Description = () => (
       on the Platform team.
     </Text>
     <Text>
-      I'm also a Project Lead for
+      I'm also a project lead for
       <chakra.span fontWeight={700}> UW Blueprint</chakra.span>.
     </Text>
     <Text>

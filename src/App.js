@@ -23,9 +23,7 @@ function App() {
           <Title>Hi I'm Tony</Title>
           <Description />
           <ContactButtons />
-          <Text textStyle="pixel" fontSize={10}>
-            blog coming soon...
-          </Text>
+          <BlogLink />
         </Stack>
         <ProfilePicture />
       </Home>

@@ -1,5 +1,5 @@
 import { Image } from "@chakra-ui/react";
-import Profile from "../assets/profile.jpg";
+import Profile from "../assets/profile.webp";
 
 const ProfilePicture = () => (
   <Image

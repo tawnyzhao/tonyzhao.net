@@ -66,7 +66,7 @@ function App() {
                 </Text>
                 <Text size="md">
                   I'm currently working as an intern at
-                  <chakra.span fontWeight={700}> Applyboard </chakra.span>
+                  <chakra.span fontWeight={700}> ApplyBoard </chakra.span>
                   on the Platform team.
                 </Text>
                 <Text size="md">

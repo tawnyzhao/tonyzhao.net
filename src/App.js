@@ -7,6 +7,7 @@ import {
   ProfilePicture,
   Title,
   Description,
+  BlogLink,
 } from "./components";
 import { Home } from "./layouts";
 import theme from "./theme";
